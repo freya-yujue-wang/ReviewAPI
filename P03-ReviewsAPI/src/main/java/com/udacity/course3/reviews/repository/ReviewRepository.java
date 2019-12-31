@@ -13,4 +13,5 @@ public interface ReviewRepository extends JpaRepository<Review, Integer> {
   List<Review> findAllByProductName(String productName);
 
   List<Review> findAllByProduct(Product product);
+
 }

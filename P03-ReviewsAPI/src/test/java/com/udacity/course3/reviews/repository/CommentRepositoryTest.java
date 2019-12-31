@@ -1,6 +1,7 @@
 package com.udacity.course3.reviews.repository;
 
 import com.udacity.course3.reviews.entity.Comment;
+import com.udacity.course3.reviews.entity.Product;
 import com.udacity.course3.reviews.entity.Review;
 import java.util.List;
 import javax.sql.DataSource;
@@ -39,9 +40,15 @@ public class CommentRepositoryTest {
   @Test
   public void findAllByReview() {
 
+    Product product = new Product();
+    product.setProductName("iphone");
+    product.setDescription("latest iphone");
+    _entityManager.persist(product);
+
     Review review = new Review();
     review.setTitle("great");
     review.setContent("very good one");
+    review.setProduct(product);
     _entityManager.persist(review);
 
     Comment comment1 = new Comment();
