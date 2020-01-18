@@ -9,8 +9,10 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
 
 @Entity
@@ -22,6 +24,14 @@ public class Comment {
     private int id;
     private String title;
     private String content;
+
+    public Comment(int id, String title, String content) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+    }
+
+
 
     @ManyToOne
     @JoinColumn(name = "review_id", nullable = false)
