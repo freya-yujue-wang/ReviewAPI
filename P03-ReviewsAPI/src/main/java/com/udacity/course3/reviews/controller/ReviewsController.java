@@ -85,11 +85,21 @@ public class ReviewsController {
     }
 
     /**
-     *
+     * List Reviews by product name
      */
     @GetMapping("/reviews/{name}")
     public List<Review> listReviewsByProductId(@PathVariable("name") String name) {
         List<Review> allReviews = reviewRepository.findAllByProductName(name);
         return allReviews;
     }
+
+    /**
+     * List Reviews by comments number
+     */
+    @GetMapping("/reviews/commentsNum/{num}")
+    public List<ReviewMongo> listReviewsByCommentsNumber(@PathVariable("num") int num) {
+        List<ReviewMongo> allReviews = reviewMongoRepository.findReviewsCommentsNumEquals(num);
+        return allReviews;
+    }
+
 }
