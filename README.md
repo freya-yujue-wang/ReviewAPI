@@ -29,3 +29,8 @@ The following guides illustrate how to use some features concretely:
 * [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
 * [Accessing data with MySQL](https://spring.io/guides/gs/accessing-data-mysql/)
 
+### Charts 
+![image](https://github.com/wyjsusan/ReviewAPI/blob/master/work_flow.png)
+![image](https://github.com/wyjsusan/ReviewAPI/blob/master/products.png)
+![image](https://github.com/wyjsusan/ReviewAPI/blob/master/reviews.png)
+![image](https://github.com/wyjsusan/ReviewAPI/blob/master/comments.png)
